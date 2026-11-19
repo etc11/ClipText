@@ -1,0 +1,10 @@
+.build/
+dist/
+*.app
+*.dSYM
+.DS_Store
+Tests/
+design-previews/
+Assets/
+scripts/
+*.log
