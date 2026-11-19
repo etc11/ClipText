@@ -4,7 +4,11 @@ SnapText is a macOS menu bar app that reads text from an image on your Mac. Drop
 
 Recognition uses Apple’s Vision framework and stays on this Mac. SnapText does not upload the image or the text.
 
-## What you need
+## Download
+
+You can install and use SnapText without building it. Download [SnapText-0.3.1-universal.dmg](https://github.com/etc11/SnapText/releases/tag/v0.3.1). It is a universal macOS disk image. Open it and drag SnapText to Applications. You need macOS 14 or newer.
+
+## What you need to build
 
 macOS 14 or newer, and Xcode or the Swift command-line tools. There are no extra packages to install and no account to sign in to.
 
