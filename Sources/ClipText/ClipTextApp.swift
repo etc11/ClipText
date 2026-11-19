@@ -3,7 +3,7 @@ import SwiftUI
 import CoreGraphics
 
 @main
-enum SnapTextApp {
+enum ClipTextApp {
     static func main() {
         if CommandLine.arguments.count == 3, CommandLine.arguments[1] == "--ocr" {
             do {
@@ -37,10 +37,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let launchedAtLogin = LaunchContext.isLoginLaunch(NSAppleEventManager.shared().currentAppleEvent)
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         guard let button = statusItem.button else { return }
-        button.image = NSImage(systemSymbolName: "text.viewfinder", accessibilityDescription: "SnapText")
+        button.image = NSImage(systemSymbolName: "text.viewfinder", accessibilityDescription: "ClipText")
         button.target = self
         button.action = #selector(toggle)
-        button.toolTip = "SnapText — drop an image, or press ⌘⇧2 to capture text"
+        button.toolTip = "ClipText — drop an image, or press ⌘⇧2 to capture text"
         let dropView = ImageDropView(frame: button.bounds)
         dropView.autoresizingMask = [.width, .height]
         dropView.clicked = { [weak self] in self?.toggle() }
@@ -76,7 +76,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let appItem = NSMenuItem()
         menu.addItem(appItem)
         let appMenu = NSMenu()
-        appMenu.addItem(withTitle: "Quit SnapText", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        appMenu.addItem(withTitle: "Quit ClipText", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         appItem.submenu = appMenu
         let editItem = NSMenuItem()
         menu.addItem(editItem)
@@ -121,7 +121,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                                            request: CGRequestScreenCaptureAccess) else {
             model.isCapturing = false
             model.needsScreenCapturePermission = true
-            model.message = "Enable SnapText in System Settings → Privacy & Security → Screen Recording. If it’s already enabled, quit and reopen SnapText so macOS can apply the permission."
+            model.message = "Enable ClipText in System Settings → Privacy & Security → Screen Recording. If it’s already enabled, quit and reopen ClipText so macOS can apply the permission."
             show()
             return
         }

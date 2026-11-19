@@ -17,7 +17,7 @@ enum ScreenCapture {
     // temporary screen content without invoking the interactive selector.
     static func selectArea(execute: (URL) throws -> ProcessResult = runSelector) throws -> Data? {
         let directory = FileManager.default.temporaryDirectory
-            .appendingPathComponent("SnapText-capture-\(UUID().uuidString)", isDirectory: true)
+            .appendingPathComponent("ClipText-capture-\(UUID().uuidString)", isDirectory: true)
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: false,
             attributes: [.posixPermissions: 0o700])
         defer { try? FileManager.default.removeItem(at: directory) }

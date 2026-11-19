@@ -30,8 +30,8 @@ enum OCRError: LocalizedError {
         switch self {
         case .invalidImage: return "This file couldn’t be read as an image. Try a PNG, JPEG, TIFF, or HEIC image."
         case .imageTooLarge: return "This image is too large. Try cropping it or exporting a smaller copy."
-        case .recognitionFailed: return "macOS couldn’t start text recognition for this image. Try again. If it keeps failing, quit and reopen SnapText."
-        case .multilingualUnavailable: return "macOS couldn’t start English/Chinese recognition. Try Read Again or reopen SnapText."
+        case .recognitionFailed: return "macOS couldn’t start text recognition for this image. Try again. If it keeps failing, quit and reopen ClipText."
+        case .multilingualUnavailable: return "macOS couldn’t start English/Chinese recognition. Try Read Again or reopen ClipText."
         }
     }
 }
@@ -116,7 +116,7 @@ enum OCR {
                     // never present partial text as successful multilingual OCR.
                     if let text = try? perform(.fast), !text.isEmpty {
                         return OCRResult(text: text, mode: .fast,
-                            warning: "Multilingual OCR is unavailable. This is an English-only result; Chinese text may be missing. Try Read Again, or run SnapText natively on an Apple silicon Mac.")
+                            warning: "Multilingual OCR is unavailable. This is an English-only result; Chinese text may be missing. Try Read Again, or run ClipText natively on an Apple silicon Mac.")
                     }
                     throw OCRError.multilingualUnavailable
                 }

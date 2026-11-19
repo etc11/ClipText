@@ -2,10 +2,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "SnapText",
+    name: "ClipText",
     platforms: [.macOS(.v14)],
-    products: [.executable(name: "SnapText", targets: ["SnapText"])],
+    products: [.executable(name: "ClipText", targets: ["ClipText"])],
     targets: [
-        .executableTarget(name: "SnapText")
+        .executableTarget(name: "ClipText")
     ]
 )

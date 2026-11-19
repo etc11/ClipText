@@ -73,7 +73,7 @@ struct CanvasView: View {
         HStack(spacing: 7) {
             Image(systemName: "text.viewfinder")
                 .font(.system(size: 16, weight: .medium)).accessibilityHidden(true)
-            Text("SnapText").font(.system(size: 13, weight: .semibold))
+            Text("ClipText").font(.system(size: 13, weight: .semibold))
             Spacer()
             Menu {
                 Toggle("Launch at login", isOn: Binding(
@@ -85,7 +85,7 @@ struct CanvasView: View {
                     Button("Approve in Login Items…", action: loginItem.openSettings)
                 }
                 Divider()
-                Button("Quit SnapText") { NSApp.terminate(nil) }
+                Button("Quit ClipText") { NSApp.terminate(nil) }
             } label: {
                 Image(systemName: "ellipsis")
                     .font(.system(size: 12, weight: .medium))
@@ -93,7 +93,7 @@ struct CanvasView: View {
                     .frame(width: 24, height: 24)
             }
             .menuStyle(.borderlessButton).menuIndicator(.hidden).fixedSize()
-            .accessibilityLabel("SnapText options")
+            .accessibilityLabel("ClipText options")
         }.frame(height: 24)
     }
 

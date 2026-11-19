@@ -17,7 +17,7 @@ enum OCRWarmup {
             bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue) else { throw OCRError.invalidImage }
         context.setFillColor(CGColor(gray: 1, alpha: 1))
         context.fill(CGRect(x: 0, y: 0, width: 640, height: 144))
-        let text = NSAttributedString(string: "SnapText 文字识别 文字辨識", attributes: [
+        let text = NSAttributedString(string: "ClipText 文字识别 文字辨識", attributes: [
             NSAttributedString.Key(kCTFontAttributeName as String): CTFontCreateWithName("PingFangSC-Regular" as CFString, 28, nil),
             NSAttributedString.Key(kCTForegroundColorAttributeName as String): CGColor(gray: 0, alpha: 1)
         ])
