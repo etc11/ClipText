@@ -6,7 +6,7 @@ Recognition uses Apple’s Vision framework and stays on this Mac. SnapText does
 
 ## Download
 
-You can install and use SnapText without building it. Download [SnapText-0.3.1-universal.dmg](https://github.com/etc11/SnapText/releases/tag/v0.3.1). It is a universal macOS disk image. Open it and drag SnapText to Applications. You need macOS 14 or newer.
+You can install and use SnapText without building it. Download [SnapText-0.3.1.zip](https://github.com/etc11/SnapText/releases/tag/v0.3.1). Unzip it and move SnapText.app to Applications. You need macOS 14 or newer.
 
 ## What you need to build
 
